@@ -64,17 +64,17 @@ app-footer {
 /* h1 font */
 @font-face {
   font-family: "Avenir Bold";
-  src: url("./assets/fonts/avenir-heavy.ttf") format("truetype");
+  src: url("../assets/fonts/avenir-heavy.ttf") format("truetype");
 }
 
 /* h2 font */
 @font-face {
   font-family: "Avenir Black";
-  src: url("./assets/fonts/avenir-black.ttf") format("truetype");
+  src: url("../assets/fonts/avenir-black.ttf") format("truetype");
 }
 
 /* p tag font */
 @font-face {
   font-family: "Avenir Book";
-  src: url("./assets/fonts/avenir-book.ttf") format("truetype");
+  src: url("../assets/fonts/avenir-book.ttf") format("truetype");
 }
