@@ -1,4 +1,4 @@
-* {
+*{
   transition: all var(--transition-duration) ease;
   margin: 0;
   padding: 0;
@@ -7,6 +7,12 @@
 .header.hidden {
   transform: translateY(-100%);
 }
+
+
+
+
+
+
 
 .header {
   position: fixed;
@@ -60,8 +66,7 @@
 }
 
 #menu-toggle:checked + .menu-icon .bar:nth-child(1) {
-  transform: rotate(45deg) translate(0.5rem, 0.5rem);
-}
+  transform: rotate(45deg) translate(0.5rem, 0.5rem}
 
 #menu-toggle:checked + .menu-icon .bar:nth-child(2) {
   opacity: 0;
