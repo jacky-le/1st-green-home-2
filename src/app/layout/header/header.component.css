@@ -18,39 +18,42 @@
   border-bottom: 0.1rem solid #00000010;
   z-index: 1001;
   display: grid;
+  -webkit-backdrop-filter: blur(
+    0.625rem
+  ); /* Add blur effect for firefox and safari*/
+  backdrop-filter: blur(0.625rem);
+  background-color: rgba(255, 255, 255, 0.5);
   grid-template-columns: repeat(3, 1fr);
-  grid-template-areas: "burger logo .";
+  grid-template-areas: "logo . burger";
 }
 
 .header-logo {
   /* grid placement */
   grid-area: logo;
-  color: var(--color-text);
+  width: 4.25rem;
+  justify-self: start;
+  mix-blend-mode: multiply;
+  object-fit: fill;
+  padding-left: 1rem;
   /* font styling */
-  font-family: var(--font-family-bold);
   text-decoration: none;
-  font-size: 1.5rem;
-  text-align: left;
   /* positioning */
   margin: 0;
   position: static;
   transform: none;
-  place-self: center;
-  position: absolute;
-  left: 50%;
   /* animation */
   transform: translateX(-50%);
 }
 /* burger styling below */
 .menu-icon {
-  align-self: center;
   grid-area: burger;
   display: flex;
+  justify-self: end;
+  align-self: center;
   flex-direction: column;
   cursor: pointer;
-  position: absolute;
-  left: var(--padding-base);
 }
+
 #menu-toggle {
   display: none;
 }
@@ -73,6 +76,6 @@
   transition: 0.4s;
 }
 
-/* #menu-toggle:checked + .menu-icon .bar:nth-child(3) {
+#menu-toggle:checked + .menu-icon .bar:nth-child(3) {
   transform: rotate(-45deg) translate(0.5rem, -0.5rem);
-} */
+}
