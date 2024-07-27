@@ -1,0 +1,23 @@
+<!-- dashboard-header.component.html -->
+<header [class.hidden]="headerHidden$ | async" class="header">
+  <input
+    type="checkbox"
+    id="menu-toggle"
+    class="menu-toggle"
+    (click)="toggleNavbar()"
+    aria-label="Toggle menu"
+  />
+  <label for="menu-toggle" class="menu-icon" tabindex="0">
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+  </label>
+  <a class="header-logo" routerLink="/home">GoodLoan.ai</a>
+</header>
+<section class="navbar">
+  <!-- Authenticated Navbar
+  <app-dashboard-navbar *ngIf="authenticationService.getAuthStatus()"/>
+
+  <!-- Default Navbar -->
+  <app-navbar *ngIf="!authenticationService.getAuthStatus()" /> -->
+</section>

@@ -1,0 +1,50 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+@keyframes open {
+  from {
+    width: 0;
+    opacity: 0;
+  }
+  to {
+    width: 16.875rem;
+    opacity: 1;
+  }
+}
+.main-container {
+  z-index: 9999;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(10px); /* Add blur effect */
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.5
+  ); /* Set background color with transparency */
+  transition: all var(--transition-duration) ease;
+  animation: fadeInUp var(--fade-in-duration) ease-out forwards;
+}
+
+/* Navigation content */
+.sidebar {
+  animation: open var(--transition-duration) ease forwards;
+  z-index: 10000;
+  background: var(--color-secondary);
+  border: 0.1rem solid #00000010;
+  max-width: 16.875rem; /* Set za maximum width */
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding-top: 4.25rem;
+  padding-right: 0.625rem; /* Right padding */
+  padding-left: 0.625rem; /* Right padding */
+  gap: 0.75rem; /* Gap between the buttons */
+}
