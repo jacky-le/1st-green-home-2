@@ -19,8 +19,7 @@
   transition: transform 0.3s ease;
   width: 100dvw;
   padding: 1rem 1.5rem;
-  background: #ffffff;
-
+  background: var(--color-primary);
   min-height: 3.25rem;
   border-bottom: 0.1rem solid #00000010;
   z-index: 1001;
