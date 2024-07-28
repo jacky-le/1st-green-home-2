@@ -9,9 +9,12 @@
   --color-primary: #2e7d32;
   --color-secondary: #81c784;
   --color-white: white;
-  --font-light: "Avenir Book";
-  --font-regular: "Avenir Black";
-  --font-bold: "Avenir Bold";
+  --font-light: "Avenir Book", sans-serif;
+  --font-regular: "Avenir Black", sans-serif;
+  --font--bold: "Avenir Heavy", sans-serif;
+  --font-size-sm: clamp(0.875rem, 0.752rem + 0.41vw, 1.125rem);
+  --font-size-md: clamp(1.125rem, 0.879rem + 0.83vw, 1.625rem);
+  --font-size-lg: clamp(1.625rem, 1.44rem + 0.62vw, 2rem);
   --transition-duration: 0.3s;
   --fade-in-duration: 0.75s;
   --shadow-card: -15px 15px 26px #bfc5cd, 15px -15px 26px #ffffff;
@@ -25,7 +28,6 @@
   overflow-x: hidden;
   display: grid;
   grid-template-rows: auto 1fr auto;
-
   grid-template-areas:
     "header"
     "main"
@@ -61,18 +63,21 @@ app-footer {
 
 /* h1 font */
 @font-face {
-  font-family: "Avenir Bold";
+  font-family: "Avenir Heavy";
   src: url("../assets/fonts/avenir-heavy.ttf") format("truetype");
+  font-weight: 700;
 }
 
 /* h2 font */
 @font-face {
   font-family: "Avenir Black";
   src: url("../assets/fonts/avenir-black.ttf") format("truetype");
+  font-weight: 400;
 }
 
 /* p tag font */
 @font-face {
   font-family: "Avenir Book";
   src: url("../assets/fonts/avenir-book.ttf") format("truetype");
+  font-weight: 300;
 }

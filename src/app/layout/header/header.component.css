@@ -24,7 +24,7 @@
 
 .header-logo {
   grid-area: logo;
-  width: 4.25rem;
+  width: 3.25rem;
   justify-self: start;
   mix-blend-mode: multiply;
   object-fit: fill;
