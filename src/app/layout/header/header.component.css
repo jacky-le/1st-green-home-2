@@ -1,50 +1,37 @@
+/* General styles */
 * {
-  transition: all var(--transition-duration) ease;
+  transition: all 0.3s ease;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-.header.hidden {
-  transform: translateY(-100%);
-}
 
+/* Header styles */
 .header {
   position: fixed;
-  transition: transform 0.3s ease;
   width: 100%;
   padding: 1rem 1.5rem;
-  background: var(--color-primary);
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(0.625rem);
   min-height: 3.25rem;
   border-bottom: 0.1rem solid #00000010;
   z-index: 1001;
   display: grid;
-  -webkit-backdrop-filter: blur(
-    0.625rem
-  ); /* Add blur effect for firefox and safari*/
-  backdrop-filter: blur(0.625rem);
-  background-color: rgba(255, 255, 255, 0.5);
   grid-template-columns: repeat(3, 1fr);
   grid-template-areas: "logo . burger";
+  transition: transform 0.3s ease;
 }
 
 .header-logo {
-  /* grid placement */
   grid-area: logo;
   width: 4.25rem;
   justify-self: start;
   mix-blend-mode: multiply;
   object-fit: fill;
   padding-left: 1rem;
-  /* font styling */
-  text-decoration: none;
-  /* positioning */
-  margin: 0;
-  position: static;
-  transform: none;
-  /* animation */
-  transform: translateX(-50%);
 }
-/* burger styling below */
+
+/* Burger icon styles */
 .menu-icon {
   grid-area: burger;
   display: flex;
@@ -57,17 +44,17 @@
 #menu-toggle {
   display: none;
 }
-#menu-toggle:checked ~ .header__nav {
-  display: flex;
-}
 
-#menu-toggle:checked + .menu-icon .bar:nth-child(1) {
+#menu-toggle:checked ~ .menu-icon .bar:nth-child(1) {
   transform: rotate(45deg) translate(0.5rem, 0.5rem);
 }
-
-#menu-toggle:checked + .menu-icon .bar:nth-child(2) {
+#menu-toggle:checked ~ .menu-icon .bar:nth-child(2) {
   opacity: 0;
 }
+#menu-toggle:checked ~ .menu-icon .bar:nth-child(3) {
+  transform: rotate(-45deg) translate(0.5rem, -0.5rem);
+}
+
 .bar {
   width: 1.5625rem;
   height: 0.1875rem;
@@ -76,6 +63,19 @@
   transition: 0.4s;
 }
 
-#menu-toggle:checked + .menu-icon .bar:nth-child(3) {
-  transform: rotate(-45deg) translate(0.5rem, -0.5rem);
+/* Sidebar styles */
+app-side-bar {
+  position: fixed;
+  top: 100%;
+  right: 0;
+  height: 100dvh;
+  width: 12rem;
+  background-color: white;
+  transform: translateX(100%);
+  border: 1px solid var(--color-border);
+  z-index: 1000;
+}
+
+#menu-toggle:checked ~ app-side-bar {
+  transform: translateX(0);
 }
