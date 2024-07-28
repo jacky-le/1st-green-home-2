@@ -47,7 +47,7 @@ app-footer {
   animation: fadeInUp var(--fade-in-duration) ease-out forwards;
   transition: all var(--transition-duration) ease;
 }
-/* 
+
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -58,8 +58,6 @@ app-footer {
     transform: translateY(0);
   }
 }
-
-
 
 /* h1 font */
 @font-face {
