@@ -16,38 +16,72 @@ h1 {
     color: var(--color-border);
 }
 
-p {
+p, a {
     font-family: var(--font-light);
     font-size: 0.875rem;
     color: white;
+}
 
+img {
+    width: 7rem;
+    height: 7rem;
+    background-color: white;
 }
 
 .footer {
     background-color: var(--color-text);
-    padding: 2rem 0;
+    padding: 2rem 1rem;
     text-align: start;
 }
 
 .container {
-    padding: 0 1rem;
+    display: grid;
+    grid-template-areas: "about contact links";
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 2.5rem;
+    border-top: 1px solid var(--color-primary);
+    border-bottom: 1px solid var(--color-primary);
+    padding: 1rem 0;
+    margin: 1rem 0;
 }
 
-.contact-us {
+.about {
+    grid-area: about;
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    justify-self: center;
+    gap: 1rem;
+    text-wrap: balance;
+    max-width: 60ch;
+}
+
+.contact {
+    grid-area: contact;
     display: flex;
     flex-direction: column;
-    text-align: center;
     gap: 0.5rem;
-    border-top: 1px solid var(--color-primary);
-    border-radius: 0.25rem;
-    padding-top: 1rem;
-    margin-top: 1rem;
+}
+
+.links {
+    grid-area: links;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
 }
 
 
+.copyright p {
+    color: var(--color-border);
+    text-align: center;
+}
 
-.copyright {
-    border-top: 1px solid var(--color-primary);
-    padding-top: 1rem;
-    margin-top: 1rem;
+@media (max-width: 768px) {
+    .container {
+        grid-template-areas: "about" "contact" "links";
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 2.5rem;
+        justify-items: center;
+    }
 }
