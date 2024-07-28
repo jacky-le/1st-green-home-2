@@ -23,13 +23,12 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  padding: 1rem 1.5rem;
+  padding: 1rem;
+  gap: 1rem;
 }
 
 .side-row + .side-row {
   border-top: 1px solid var(--color-border);
-  margin-top: 1rem;
-  padding-top: 1rem;
 }
 
 .side-row {
@@ -38,6 +37,7 @@ a {
   gap: 1rem;
   cursor: pointer;
   padding: 0.25rem 0.5rem;
+
 }
 
 .side-row:hover {
